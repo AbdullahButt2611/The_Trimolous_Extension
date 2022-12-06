@@ -1,0 +1,158 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+/* ================             CSS Varaibles   ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root{
+
+    /*              Colors / Theme          */
+    --hue-color: 206;
+    --text-color: white;
+    --first-color: #000;
+    --text-gradient: linear-gradient(hsl(var(--hue-color),4%,24%), hsl(var(--hue-color),4%,8%));
+    --first-color-light: rgb(16, 16, 16);
+
+
+
+    /*              Typographhy          */
+    --body-font: 'Poppins', sans-serif;
+    --small-font-size: 0.938rem;
+    --biggest-font-size: 3rem;
+   
+
+    /*              Font weight          */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    
+}
+
+@media screen and (min-width: 768px) {
+    :root{
+       
+        --small-font-size: 1rem;
+        --biggest-font-size: 5rem;
+       
+    }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    background-color: var(--text-color);
+    line-height: 1.6;
+    width: 50.1rem;
+    height: fit-content;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+h3{
+    font-weight: var(--font-semi-bold);
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    width: 70%;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+/* ====================================   Error Page    ================================ */
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+  }
+  
+  .main {
+    overflow: hidden; /*For the animations ScrollReveal */
+  }
+  
+  /*=============== HEADER & NAV ===============*/
+
+  
+  
+ .home {
+    background-color: var(--first-color);
+    padding: 1.5rem 0 2rem;
+    height: 100vh;
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--text-color);
+  }
+  
+  .home__container {
+    display: grid;
+    align-content: flex-start;
+    row-gap: 2.5rem;
+  }
+  
+  .home__data {
+    text-align: left;
+  }
+
+
+
+.home__title {
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: var(--biggest-font-size);
+    margin: .75rem 0;
+  }
+  
+  .home__button {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: var(--text-color);
+    color: var(--first-color);
+    padding: .80rem 1.5rem;
+    border-radius: 3rem;
+    transition: .4s;
+    cursor: pointer;
+  }
+  
+  .home__button:hover {
+    background-color: var(--first-color-light);
+    color: var(--text-color);
+  }
+  
+  
+  
+  
